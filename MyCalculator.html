@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #calculator {
+      background-color: #222;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      margin: 15px 0;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 18px;
+      width: 100%;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    #clear {
+      background-color: #e74c3c;
+    }
+
+    #clear:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+  <div id="calculator">
+    <div class="button-grid">
+      <button onclick="calculation += '1'; console.log(calculation);">1</button>
+      <button onclick="calculation += '2';  console.log(calculation);">2</button>
+      <button onclick="calculation += '3';  console.log(calculation);">3</button>
+      <button onclick="calculation += '+';  console.log(calculation);">+</button>
+    </div>
+    <div class="button-grid">
+      <button onclick="calculation += '4';  console.log(calculation);">4</button>
+      <button onclick="calculation += '5';  console.log(calculation);">5</button>
+      <button onclick="calculation += '6';  console.log(calculation);">6</button>
+      <button onclick="calculation += '-';  console.log(calculation);">-</button>
+    </div>
+    <div class="button-grid">
+      <button onclick="calculation += '7';  console.log(calculation);">7</button>
+      <button onclick="calculation += '8';  console.log(calculation);">8</button>
+      <button onclick="calculation += '9';  console.log(calculation);">9</button>
+      <button onclick="calculation += '*';  console.log(calculation);">*</button>
+    </div>
+    <div class="button-grid">
+      <button onclick="calculation += '.';  console.log(calculation);">.</button>
+      <button onclick="calculation += '0';  console.log(calculation);">0</button>
+      <button onclick="calculation += '/';  console.log(calculation);">/</button>
+      <button onclick="calculation = eval(calculation);  console.log(calculation);">=</button>
+      <button id="clear" onclick="calculation = '' ;console.log(calculation);">Clear</button>
+    </div>
+  </div>
+  <script>
+      let calculation = '';
+  </script>
+  </body>
+  </html>
